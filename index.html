@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Letter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(40, 40, 60, 0.8) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(60, 40, 60, 0.6) 0%, transparent 20%);
+        }
+
+        .letter {
+            max-width: 600px;
+            padding: 2rem;
+            text-align: left;
+            white-space: pre-line;
+            opacity: 0;
+            animation: fadeIn 3s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 5; }
+        }
+
+        .signature {
+            margin-top: 2rem;
+            font-style: italic;
+            text-align: right;
+        }
+
+        /* Hidden audio player */
+        #audioPlayer {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="letter">
+        
+
+      Hey Karla, my beloved girl,
+
+I know this might sound strange—or maybe even come out of nowhere—but I hope you’ll read this all the way through.
+
+I don’t really know where to start. It might take me days to write this, but I’ll just let it all out. It's not that I lost feelings for you, or that I didn’t want to talk to you. Somehow, I just felt like stepping back was the right thing to do, and I’ve always followed my intuition. Like some kind of animal in the forest… empty, instinctual.
+
+I grew up with this weird, hollow feeling that eventually became normal. I don’t even know what it was exactly, but I think it kept me going. I lived in the shadows—not knowing who I was or what I wanted. I followed others, avoided my own path, and that made life feel… meaningless sometimes.
+
+But then you came into my life.
+
+You made me realize so much. I truly loved you—and still do. I always will. Because you were the first person who made me feel something. You saw me. If I hadn’t met you, maybe I would’ve done something just to be remembered—something messed up, like those people who leave behind a signature just to prove they existed.
+
+But you—you noticed me. You saw the emptiness in my eyes. No one else ever did. After all these years hiding behind a mask, you looked straight into me and saw the pain. And that means more than I can explain.
+
+Even though you went through so much in life, through real pain, you still had the strength to see someone else. That’s rare. That’s beautiful.
+
+Yes, I run from my other side. I’d rather keep moving than face it. Maybe that’ll change someday—or maybe not. Maybe I really am just a hopeless psycho. I don’t know. But what I do know is that I hurt you. I lied. I was distant. I wasn’t there when you needed me. And none of it was ever your fault.
+
+You gave me a reason to live. I will never forget the kind of person you are—so full of strength and love, even when I didn’t deserve it.
+
+I miss you. I will miss you forever.
+
+I’m sorry for everything I did to you.
+
+I’m just grateful to have known you, Karla.
+
+My only love.
+        <div class="signature">[zakaria]</div>
+    </div>
+
+    <!-- Sad piano music (Ludovico Einaudi - Nuvole Bianche) -->
+    <audio id="audioPlayer" autoplay loop>
+        <source src="https://www.youtube.com/watch?v=veHqJSC-9Lo" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('audioPlayer');
+            audio.volume = 0.3; // Set lower volume
+            
+            // Enable audio after first interaction (browser requirement)
+            document.body.addEventListener('click', function() {
+                audio.play().catch(e => console.log("Audio play failed:", e));
+            }, { once: true });
+        });
+    </script>
+</body>
+</html>
